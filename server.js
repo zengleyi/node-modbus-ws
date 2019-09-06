@@ -399,9 +399,9 @@ var start = function(options, callback) {
     /* set up some default options
      */
     var title = "Modbus-WS server";
-    var tcpPort = options.tcpport || 3000;
+    var tcpPort = Number(options.tcpport) || 3000;
     var port = options.serial || false;
-    var baud = options.baudrate || 9600;
+    var baud = Number(options.baudrate) || 9600;
     var ip = options.ip || false;
     var test = options.test || true;
     var noCache = options.nocache || false;
